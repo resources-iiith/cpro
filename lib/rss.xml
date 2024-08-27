@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[notes]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>notes</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 27 Aug 2024 08:54:58 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 27 Aug 2024 08:54:57 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[Arrays]]></title><description><![CDATA[ 
+ <br>Collection of like items stored at contiguous memory locations.<br>
+<br>// data_type array_name [size];
+int a[5] = {1,2,4,8,16}; 
+Copy<br>Array size can be skipped if an initializer list is used.<br>int b[] = {9,8,7,6}
+Copy<br>Here, the compiler infers the length of array from the initializer list.<br>Array elements can be accessed as a[i]<br>printf("%d", a[2]) // Output: 4
+Copy<br><br>&amp;a[0] refers to the memory address of  the first element of the array a.<br>
+a[0] refers to the element stored at that memory address.<br><br>for(int i = 0; i &lt; 5; i++) {
+  scanf("%d", &amp;a[i])
+}
+Copy<br><br>Next: [[]]]]></description><link>cpro/Arrays.html</link><guid isPermaLink="false">cpro/Arrays.md</guid><pubDate>Tue, 27 Aug 2024 04:02:40 GMT</pubDate><enclosure url="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAX0AAAB6CAMAAABk1XNvAAAABlBMVEX///8AAABVwtN+AAAC6klEQVR4nO2c62KrIBAG5f1fuifpUYko7AWyRWd+tBr9WB2RqEm7LAAAAAAAAPBV0j+it+GxpO0HBJDo/HHQ9yN5iafvh/Ead9APAAAAAAAAADAfyUP0xk+PxyD2vWA/EuxHgv1IsB8J9iOpGWxdVWLfy7XB9kU99r207VfWGLFBj+LSoOCWFvtesB+JxP7VOtj3cmkW+1/g1ODvF9oYeYZzYvBXN/a/QGnw/yuCp/jY91IY3F7A/niOBvN5njSMJlVnVVlQkypzuizoSZczyiwYwH4k6WJamwULsi/uXBC98XcCmZFgPxDkR4L9SLAfCfYjwX4k2A8E+ZFgPxLsR4L9SLAfCfYjwX4kHeyvT/zXR/+qTwD2ldNhXlc5KJx9CU0ezpqxhE6byP6rpGY31t+Ho6CtnD5e+Vb4NaEPn7Vjpov97DhYwh6BU9rfPmO02D+GF4393mG5wCKcLIcub9CUymUb7BfhRSGwd1g+5pXhKPv7Fw6tfd8q8CRcTmgq6/r+xz6ns1NJwR36ftmIqrLYvitcadIWM/f9Irwo7ReVNQL7hQ/tGDB3/vVfN6f9Bc0pXIYVw9ZHOHkrr1P68B53jSEOyryixSeGu+S2/OE+z3jT+JzwoSlrEDqA/VDQHwn2Q0F/KOgPBf2hSPW7/urlaSj0y9b1nCSurCM8RV3RytgfVVeyNvaH1RWsjv1xddu1sD+ybuudGvuD61YPgOfY1JY2j3p1cWPpkLrlxzOaupqa+7xrT+qL7H5TIzug7rav5p5ar5o+50Sf3blGransr7H6ZjnIbtiyqXpk3NK6wvvZ3+rnt843s+8e92sPFHo9PJM+u3AsbQ1L18ub2zW67/d+1y23Yd3DYdc8zS2wF76BfVGLQdc8N7cva9EzArQGtdZS63llHffzCxJLXRueFl1ZR3jGuv1bnNEC9t9Z7DtbnNEC9t9Z7DtbnNEC9t9Z7DtbnNHCH7MPcrrbBwAAAAAAAAAAeDQ/+OkGffyqkHAAAAAASUVORK5CYII=" length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAX0AAAB6CAMAAABk1XNvAAAABlBMVEX///8AAABVwtN+AAAC6klEQVR4nO2c62KrIBAG5f1fuifpUYko7AWyRWd+tBr9WB2RqEm7LAAAAAAAAPBV0j+it+GxpO0HBJDo/HHQ9yN5iafvh/Ead9APAAAAAAAAADAfyUP0xk+PxyD2vWA/EuxHgv1IsB8J9iOpGWxdVWLfy7XB9kU99r207VfWGLFBj+LSoOCWFvtesB+JxP7VOtj3cmkW+1/g1ODvF9oYeYZzYvBXN/a/QGnw/yuCp/jY91IY3F7A/niOBvN5njSMJlVnVVlQkypzuizoSZczyiwYwH4k6WJamwULsi/uXBC98XcCmZFgPxDkR4L9SLAfCfYjwX4k2A8E+ZFgPxLsR4L9SLAfCfYjwX4kHeyvT/zXR/+qTwD2ldNhXlc5KJx9CU0ezpqxhE6byP6rpGY31t+Ho6CtnD5e+Vb4NaEPn7Vjpov97DhYwh6BU9rfPmO02D+GF4393mG5wCKcLIcub9CUymUb7BfhRSGwd1g+5pXhKPv7Fw6tfd8q8CRcTmgq6/r+xz6ns1NJwR36ftmIqrLYvitcadIWM/f9Irwo7ReVNQL7hQ/tGDB3/vVfN6f9Bc0pXIYVw9ZHOHkrr1P68B53jSEOyryixSeGu+S2/OE+z3jT+JzwoSlrEDqA/VDQHwn2Q0F/KOgPBf2hSPW7/urlaSj0y9b1nCSurCM8RV3RytgfVVeyNvaH1RWsjv1xddu1sD+ybuudGvuD61YPgOfY1JY2j3p1cWPpkLrlxzOaupqa+7xrT+qL7H5TIzug7rav5p5ar5o+50Sf3blGransr7H6ZjnIbtiyqXpk3NK6wvvZ3+rnt843s+8e92sPFHo9PJM+u3AsbQ1L18ub2zW67/d+1y23Yd3DYdc8zS2wF76BfVGLQdc8N7cva9EzArQGtdZS63llHffzCxJLXRueFl1ZR3jGuv1bnNEC9t9Z7DtbnNEC9t9Z7DtbnNEC9t9Z7DtbnNHCH7MPcrrbBwAAAAAAAAAAeDQ/+OkGffyqkHAAAAAASUVORK5CYII=&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Assignment]]></title><description><![CDATA[ 
+ <br><br>Variables store data that can change during program execution. They are defined by specifying a data type followed by a variable name.<br>int age = 17;
+float height = 5.9f;
+char initial = "A";
+Copy<br><br>
+<br>Variable names must start with a letter or underscore.
+<br>They can contain letters, digits, and underscores.
+<br>They are case-sensitive.
+<br><br>Constants store data that remains unchanged throughout the program. They can be defined using const or #define.<br>const int MAX_AGE = 100;
+#define PI 3.14159
+Copy<br>const: Prevents the variable's value from being modified<br>
+define: A preprocessor directive that creates a constant value, substituted directly into the code during preprocessing.<br><br>x += 5;  // Equivalent to x = x + 5;
+x -= 3;  // Equivalent to x = x - 3;
+x *= 2;  // Equivalent to x = x * 2;
+x /= 2;  // Equivalent to x = x / 2;
+x %= 4;  // Equivalent to x = x % 4;
+Copy<br><br>int x = 10;
+int y = 20;
+Copy<br><br>z = x; // z = 10  
+x = y; // x = 20, y = 20  
+y = z; // y = 10
+Copy<br><br>x = x + y
+y = x - y
+x = x - y
+Copy<br><br>x = x+y-(y=x);
+Copy<br>(y=x) is evaluated first as it is in brackets<br><br>Next: <a data-href="Data Types" href="cpro/Data Types.html" class="internal-link" target="_self" rel="noopener">Data Types</a>]]></description><link>cpro/Assignment.html</link><guid isPermaLink="false">cpro/Assignment.md</guid><pubDate>Mon, 26 Aug 2024 12:45:44 GMT</pubDate></item><item><title><![CDATA[Basic Operators]]></title><description><![CDATA[ 
+ <br>Operators in C are symbols that perform operations on variables and values.<br><br>These operators perform mathematical operations.<br>
+<br>+ (Addition): Adds two operands.
+
+<br>Example: c = a + b;
+
+
+<br>- (Subtraction): Subtracts the second operand from the first.
+
+<br>Example: c = a - b;
+
+
+<br>* (Multiplication): Multiplies two operands.
+
+<br>Example: c = a * b;
+
+
+<br>/ (Division): Divides the first operand by the second.
+
+<br>Example: c = a / b;
+
+
+<br>% (Modulus): Returns the remainder of division.
+
+<br>Example: c = a % b; (Useful for determining if a number is even or odd)
+
+
+<br><br>These operators compare two values and return a boolean result (true/false).<br>
+<br>== (Equal to): Returns true if both operands are equal.
+<br>!= (Not equal to): Returns true if operands are not equal.
+<br>&gt; (Greater than): Returns true if the left operand is greater than the right.
+<br>&lt; (Less than): Returns true if the left operand is less than the right.
+<br>&gt;= (Greater than or equal to): Returns true if the left operand is greater than or equal to the right.
+<br>&lt;= (Less than or equal to): Returns true if the left operand is less than or equal to the right.
+<br><br>These operators increase or decrease a variable's value by 1.<br>
+<br>++ (Increment): Increases an integer's value by 1.
+
+<br>Example: a++; or ++a;
+
+
+<br>-- (Decrement): Decreases an integer's value by 1.
+
+<br>Example: a--; or --a;
+
+
+<br>Order of Operation:<br>Prefix: The operation (increment or decrement) is performed before the variable’s value is used in the expression. Ex. ++a , --a<br>int a = 5;
+int b = ++a; // a is incremented to 6, then b is assigned 6
+Copy<br>Postfix: The operation is performed after the variable’s value is used in the expression. Ex. a++, a--<br>int a = 5;
+int b = a++; // b is assigned 5, then a is incremented to 6
+Copy<br><br>Next: <a data-href="Assignment" href="cpro/Assignment.html" class="internal-link" target="_self" rel="noopener">Assignment</a>]]></description><link>cpro/Basic Operators.html</link><guid isPermaLink="false">cpro/Basic Operators.md</guid><pubDate>Tue, 27 Aug 2024 04:32:06 GMT</pubDate></item><item><title><![CDATA[Basics]]></title><description><![CDATA[ 
+ <br><br>&gt; vim main.c            # edit main.c
+&gt; gcc main.c -o main    # compile main.c to main
+&gt; ./main                # run main
+Copy<br><br>#include &lt;stdio.h&gt; // c library where printf() is defined
+
+int main() {  // &lt;return type&gt; main(&lt;parameter type(s)&gt;)
+  // main fucntion is run whenever the program is run
+
+  printf("Hello World"); // printf() is called here, with "Hello World"
+                         // as its argument
+
+  // every statement must end in a semicolon
+
+  return 0; // if not specified, 0 will be returned by default.
+}
+Copy<br>Generally, a return code of 0 is used to signify success, and other return values are used to signify runtime errors.<br>// is used for single line comments, and /* */ are used for multi line comments<br>C code is whitespace agnostic, so all of these lines could be combined into one.<br><br>Next: <a data-href="Makefiles" href="cpro/Makefiles.html" class="internal-link" target="_self" rel="noopener">Makefiles</a>]]></description><link>cpro/Basics.html</link><guid isPermaLink="false">cpro/Basics.md</guid><pubDate>Tue, 27 Aug 2024 04:23:53 GMT</pubDate></item><item><title><![CDATA[Bitwise Operators]]></title><description><![CDATA[ 
+ <br>Bitwise operators are used to perform operations directly on the binary representations of integers. These operators manipulate individual bits within the data.<br>&amp; (AND)<br>
+Compares each bit of two numbers and returns 1 if both bits are 1; otherwise, it returns 0.<br>int result = 5 &amp; 3; // 5 (0101) &amp; 3 (0011) = 1 (0001)
+Copy<br>| (OR)<br>
+Compares each bit of two numbers and returns 1 if at least one of the bits is 1; otherwise, it returns 0.<br>int result = 5 | 3; // 5 (0101) | 3 (0011) = 7 (0111)
+Copy<br>^ (XOR)<br>
+Compares each bit of two numbers and returns 1 if the bits are different; otherwise, it returns 0.<br>int result = 5 ^ 3; // 5 (0101) ^ 3 (0011) = 6 (0110)
+Copy<br>~ (NOT)<br>
+Flips all the bits of a number, turning 1 into 0 and 0 into 1. It is a unary operator, meaning it operates on a single operand.<br>int result = ~5; // ~5 (0101) = -6 (in two's complement form: 1010)
+Copy<br>&lt;&lt; (Left Shift)<br>
+Shifts the bits of the first operand to the left by the number of positions specified by the second operand. Each shift to the left effectively multiplies the number by 2.<br>int result = 5 &lt;&lt; 1; // 5 (0101) &lt;&lt; 1 = 10 (1010)
+Copy<br>&gt;&gt; (Right Shift)<br>Shifts the bits of the first operand to the right by the number of positions specified by the second operand. Each shift to the right effectively divides the number by 2.<br>int result = 5 &gt;&gt; 1; // 5 (0101) &gt;&gt; 1 = 2 (0010)
+Copy<br><br><br>1011 ^ 0001 = 1011
+Copy<br>
+<br>If we XOR an even number by 1, it increments it by 1.
+<br>If we XOR an odd number by 1, it decreases it by 1.
+<br><br>
+<br>If we OR an even number with 1, it increases it by 1.
+<br>Odd numbers are unchanged.
+<br><br>Next: <a data-href="Type Casting" href="cpro/Type Casting.html" class="internal-link" target="_self" rel="noopener">Type Casting</a>]]></description><link>cpro/Bitwise Operators.html</link><guid isPermaLink="false">cpro/Bitwise Operators.md</guid><pubDate>Mon, 26 Aug 2024 12:47:46 GMT</pubDate></item><item><title><![CDATA[Conditional Operators]]></title><description><![CDATA[ 
+ <br>if/else statements are used to execute code blocks based on specific conditions. They allow your program to make decisions and branch its execution.<br>if (condition) {
+    // Code to be executed if condition is true
+} else {
+    // Code to be executed if condition is false
+}
+Copy<br>The if statement evaluates a condition, and if the condition is true, it executes the code block.<br>int age = 17;
+if (age &gt;= 18) {
+    printf("You are an adult.\n");
+}
+Copy<br>When the condition is false, the else code block is executed.<br>int age = 17;
+if (age &gt;= 18) {
+    printf("You are an adult.\n");
+} else {
+    printf("You are a minor.\n");
+}
+Copy<br><br>The if/else if/else structure allows for multiple conditions to be checked sequentially.<br>if (condition1) {
+    // Code to be executed if condition1 is true
+} else if (condition2) {
+    // Code to be executed if condition2 is true
+} else {
+    // Code to be executed if both conditions are false
+}
+
+Copy<br><br>if statements can be nested within each other to handle more complex decision-making.<br>int age = 17;
+int hasID = 1;
+
+if (age &gt;= 18) {
+    if (hasID) {
+        printf("You can enter.\n");
+    } else {
+        printf("You need an ID to enter.\n");
+    }
+} else {
+    printf("You are too young to enter.\n");
+}
+
+Copy<br><br>Logical operators are used to combine multiple conditions in decision-making structures like if statements. The two primary logical operators in C are || (OR) and &amp;&amp; (AND).<br><br>The || operator returns true if at least one of the conditions is true.<br><br>The &amp;&amp; operator returns true only if both conditions are true. It is used when all specified conditions must be met to execute a block of code.<br><br>int age = 17;
+int hasID = 1;
+
+if ((age &gt;= 18 &amp;&amp; hasID) || age &gt;= 21) {
+    printf("You can enter.\n");
+} else {
+    printf("You cannot enter.\n");
+}
+Copy<br><br>The ternary operator is a shorthand way of writing an if-else statement in a single line, allowing for concise conditional expressions.<br>condition ? expression_if_true : expression_if_false;
+Copy<br><br>int a = 10;
+int b = 20;
+int max = (a &gt; b) ? a : b;
+Copy<br>The above code checks if a is greater than b. If true, max is set to a; otherwise, max is set to b.<br><br>The switch statement in C allows you to execute different blocks of code based on the value of an expression. It's often used as a more readable alternative to multiple if-else statements when comparing the same variable against different values.<br>switch (expression) {
+    case value1:
+        // Code to be executed if expression == value1
+        break;
+    case value2:
+        // Code to be executed if expression == value2
+        break;
+    default: // (optional)
+        // Code to be executed if expression doesn't match any case
+}
+Copy<br>
+break; Ends the switch statement. Without break, the program continues executing the subsequent cases (known as fall-through).
+<br><br>#include &lt;stdio.h&gt;
+
+int main() {
+    int grade = 3;
+
+    switch (day) {
+        case 1:
+            printf("lol\n");
+            break;
+        case 2:
+            printf("Bad.\n");
+            break;
+        case 3:
+            printf("Meh\n");
+            break;
+        case 4:
+            printf("Good\n");
+            break;
+        case 5:
+            printf("Excellent!\n");
+            break;
+        default:
+            printf("Okay\n");
+    }
+    return 0;
+}
+Copy<br><br>Next: <a data-href="Bitwise Operators" href="cpro/Bitwise Operators.html" class="internal-link" target="_self" rel="noopener">Bitwise Operators</a>]]></description><link>cpro/Conditional Operators.html</link><guid isPermaLink="false">cpro/Conditional Operators.md</guid><pubDate>Mon, 26 Aug 2024 13:05:59 GMT</pubDate></item><item><title><![CDATA[Data Types]]></title><description><![CDATA[ 
+ <br>Data types in C define the type and size of data that variables can hold. Understanding these types is fundamental for writing efficient and error-free programs.<br><br>
+<br>int:
+
+<br>Stores integers (whole numbers).
+<br>Typically 4 bytes (varies by system).
+<br>Example: int age = 25;
+
+
+<br>float:
+
+<br>Stores floating-point numbers (single precision).
+<br>Typically 4 bytes.
+<br>Example: float pi = 3.14f;
+
+
+<br>double:
+
+<br>Stores double-precision floating-point numbers.
+<br>Typically 8 bytes.
+<br>Example: double largePi = 3.14159265358979;
+
+
+<br>char:
+
+<br>Stores a single character.
+<br>Typically 1 byte.
+<br>Example: char initial = 'A';
+
+
+<br><br>
+<br>arrays:
+
+<br>Collection of elements of the same type.
+<br>Example: int numbers[5] = {1, 2, 3, 4, 5};
+
+
+<br>pointers:
+
+<br>Stores memory addresses.
+<br>Example: int *ptr = &amp;age;
+
+
+<br>struct:
+
+<br>Custom data type that groups variables of different types.
+
+
+<br>struct Person { char name[50]; int age; };
+Copy<br>
+<br>union:
+<br>
+<br>Similar to struct, but members share the same memory location. 
+<br>union Data {
+    int intValue;
+    float floatValue;
+};
+Copy<br><br>Defines a set of named integer constants<br>enum Weekday {Sunday, Monday, Tuesday};
+enum Weekday today = Sunday;
+Copy<br><br>
+<br>short, long:
+
+<br>Alters the size of int or double.
+<br>Example: short int age;, long double distance;
+
+
+<br>signed, unsigned:
+
+<br>Specifies whether a variable can hold negative values.
+<br>Example: unsigned int count;
+
+
+<br><br>
+<br>char: 1 byte (8 bits)
+
+<br>Signed: -2^7 to 2^7 - 1 (-128 to 127)
+<br>Unsigned: 0 to 2^8 - 1 (0 to 255)
+
+
+<br>int: 4 bytes (32 bits)
+
+<br>Signed: -2^31 to 2^31 - 1 (-2,147,483,648 to 2,147,483,647)
+<br>Unsigned: 0 to 2^32 - 1 (0 to 4,294,967,295)
+
+
+<br>float: 4 bytes (32 bits)
+
+<br>Range: ~2^-126 to 2^128, ~24-bit precision
+
+
+<br>double: 8 bytes (64 bits)
+
+<br>Range: ~2^-1022 to 2^1024, ~53-bit precision
+
+
+<br>short: 2 bytes (16 bits)
+
+<br>Signed: -2^15 to 2^15 - 1 (-32,768 to 32,767)
+<br>Unsigned: 0 to 2^16 - 1 (0 to 65,535)
+
+
+<br>long / long long: 8 bytes (64 bits)
+
+<br>Signed: -2^63 to 2^63 - 1 (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807)
+<br>Unsigned: 0 to 2^64 - 1 (0 to 18,446,744,073,709,551,615)#
+
+
+<br><br>Next: <a data-href="printf()" href="cpro/printf().html" class="internal-link" target="_self" rel="noopener">printf()</a>]]></description><link>cpro/Data Types.html</link><guid isPermaLink="false">cpro/Data Types.md</guid><pubDate>Mon, 26 Aug 2024 13:24:12 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+ <br><br><a data-href="Basics" href="cpro/Basics.html" class="internal-link" target="_self" rel="noopener">Basics</a><br><br><a data-tooltip-position="top" aria-label="https://github.com/amoiba42/course-material-2k23/tree/main/resources/sem1/Cpro" rel="noopener" class="external-link" href="https://github.com/amoiba42/course-material-2k23/tree/main/resources/sem1/Cpro" target="_blank">2023</a><br>
+<a data-tooltip-position="top" aria-label="https://github.com/zyx7k/course-material/tree/main/sem_1/Computer%20Programming" rel="noopener" class="external-link" href="https://github.com/zyx7k/course-material/tree/main/sem_1/Computer%20Programming" target="_blank">2022</a>]]></description><link>cpro/index.html</link><guid isPermaLink="false">cpro/index.md</guid><pubDate>Mon, 26 Aug 2024 12:54:06 GMT</pubDate></item><item><title><![CDATA[Loops]]></title><description><![CDATA[ 
+ <br>Loops in C are used to repeatedly execute a block of code as long as a specified condition is true. The two most common loops are while and for.<br><br>The while loop continues to execute as long as the condition remains true. It checks the condition before each iteration.<br>while (condition) {
+    // Code to be executed
+}
+Copy<br><br>int count = 0;
+while (count &lt; 5) {
+    printf("Count: %d\n", count);
+    count++;
+}
+Copy<br><br>The for loop is typically used when the number of iterations is known. It includes initialization, condition, and increment/decrement in a single line.<br>for (initialization; condition; increment) {
+    // Code to be executed
+}
+Copy<br><br>for (int i = 0; i &lt; 5; i++) {
+    printf("i: %d\n", i);
+}
+Copy<br><br>
+<br>while Loop:
+
+<br>Best when the number of iterations isn't known in advance.
+<br>Condition is evaluated before the loop body executes.
+
+
+<br>for Loop:
+
+<br>Best when the number of iterations is known or easily defined.
+<br>Combines initialization, condition, and increment/decrement in one line, making the loop structure concise.
+
+
+<br><br>The break statement is used to exit a loop prematurely. When encountered, it immediately terminates the nearest enclosing loop, and control is transferred to the code following the loop.<br>for (int i = 0; i &lt; 10; i++) {
+    if (i == 5) {
+        break; // Exit the loop when i equals 5
+    }
+    printf("%d\n", i);
+}
+Copy<br><br>The continue statement skips the remaining code in the current iteration of a loop and immediately proceeds to the next iteration. It does not terminate the loop, just the current iteration.<br>for (int i = 0; i &lt; 10; i++) {
+    if (i % 2 == 0) {
+        continue; // Skip even numbers
+    }
+    printf("%d\n", i);
+}
+Copy<br><br>Next: <a data-href="Conditional Operators" href="cpro/Conditional Operators.html" class="internal-link" target="_self" rel="noopener">Conditional Operators</a>]]></description><link>cpro/Loops.html</link><guid isPermaLink="false">cpro/Loops.md</guid><pubDate>Mon, 26 Aug 2024 12:49:53 GMT</pubDate></item><item><title><![CDATA[Makefiles]]></title><description><![CDATA[ 
+ <br><br>Makefiles are used in automation of the build process for software projects. They define a set of rules for compiling and linking programs, ensuring that your project is built efficiently and consistently.<br>A typical Makefile consists of targets, dependencies, and commands<br><br>build:
+	gcc main.c -o main
+
+run:
+	@gcc main.c -o main
+	@./main
+
+clean:
+	rm main
+Copy<br>
+<br>build: Compiles main.c into an executable named main.
+<br>run: Rebuilds main.c (if needed) and runs the main executable. The @ symbol before commands suppresses their output in the terminal, making the process cleaner.
+<br>clean: Deletes the main executable, cleaning up your directory.
+<br><br>Next: <a data-href="Basic Operators" href="cpro/Basic Operators.html" class="internal-link" target="_self" rel="noopener">Basic Operators</a>]]></description><link>cpro/Makefiles.html</link><guid isPermaLink="false">cpro/Makefiles.md</guid><pubDate>Tue, 27 Aug 2024 04:31:42 GMT</pubDate></item><item><title><![CDATA[printf()]]></title><description><![CDATA[ 
+ <br>The printf() function in C is used to output formatted text to the console. It's part of the standard I/O library (stdio.h), and allows you to print various data types using format specifiers.<br>#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 17;
+    printf("I am %d years old.\n", age);
+}
+Copy<br><br>Format specifiers in printf() tell the function what type of data to expect and how to format it.<br>
+<br>%d or %i: Integer (decimal)
+<br>%ld: long int
+<br>%lld: long long int
+<br>%f: Floating-point number
+<br>%.nf: Floating-point number with n decimal places
+<br>%e or %E: Scientific notation
+<br>%c: Single character
+<br>%s: String (null-terminated array of characters)
+<br>%u: Unsigned integer
+<br>%p: Pointer
+<br>%%: Literal % character
+<br>You can also print numbers with padded digits using the format specifier %mnd<br>
+where m is the digit to pad with, and n is the number of digits to pad it to.<br>int a = 47;
+printf("%05d", a); // Output: 00047
+Copy<br><br>Escape sequences are used to represent special characters in strings. They start with a backslash (\).<br>
+<br>\n: Newline
+<br>\t: Horizontal tab
+<br>\\: Backslash
+<br>\": Double quote
+<br>\r: Carriage return
+<br>\b: Backspace
+<br>\a: Alert (bell)
+<br>\0: Null character (end of string)
+<br><br>Next: <a data-href="scanf()" href="cpro/scanf().html" class="internal-link" target="_self" rel="noopener">scanf()</a>]]></description><link>cpro/printf().html</link><guid isPermaLink="false">cpro/printf().md</guid><pubDate>Tue, 27 Aug 2024 04:21:22 GMT</pubDate></item><item><title><![CDATA[scanf()]]></title><description><![CDATA[ 
+ <br>The scanf() function in C is used to read formatted input from the standard input (typically the keyboard). It’s the counterpart to printf() and allows you to capture user input.<br>#include &lt;stdio.h&gt;
+
+int main() {
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &amp;age);
+    printf("You are %d years old.\n", age);
+    return 0;
+}
+Copy<br>scanf() has the same format specifiers and escape codes as printf()<br><br>When reading strings with %s, ensure the input fits in the buffer to avoid overflow. Use %Ns to limit the input size, where N is the maximum number of characters to read.<br>char name[20];
+scanf("%19s", name);
+Copy<br><br>Next: <a data-href="Loops" href="cpro/Loops.html" class="internal-link" target="_self" rel="noopener">Loops</a>]]></description><link>cpro/scanf().html</link><guid isPermaLink="false">cpro/scanf().md</guid><pubDate>Mon, 26 Aug 2024 12:49:40 GMT</pubDate></item><item><title><![CDATA[Type Casting]]></title><description><![CDATA[ 
+ <br>Type casting is the method used to change one data type to another.<br>
+Hierarchy of data types is based on size.<br>
+int -&gt; unsigned int -&gt; long -&gt; unsigned long -&gt; long long -&gt; unsigned long long -&gt; float -&gt; double -&gt; long double
+<br><br>Happens implicitly, without being specified in the program<br>short a = 10;
+int b;
+b = a;
+Copy<br><br>Happens when specified in the program like so: a = (&lt;type&gt;)a<br>int a = 15; // a = 15
+a = (float)a; // a is now a float
+
+int b = 12; // b and c are integers
+int c = 5;
+
+float div;
+div = (float)b/c; // b is converted to float before division
+Copy<br><br>
+<br>atof(): String -&gt; float
+<br>atoi(): String -&gt; int
+<br>atbol(): String -&gt; long
+<br>ltoa(): long -&gt; String
+<br>itoba(): int -&gt; String
+<br><br> Next: <a data-href="Arrays" href="cpro/Arrays.html" class="internal-link" target="_self" rel="noopener">Arrays</a>]]></description><link>cpro/Type Casting.html</link><guid isPermaLink="false">cpro/Type Casting.md</guid><pubDate>Mon, 26 Aug 2024 10:22:30 GMT</pubDate></item></channel></rss>
