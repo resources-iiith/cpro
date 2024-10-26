@@ -7,7 +7,9 @@ Labs/Assignments for CS0.101 Computer Programming
 ├── assignments
 │   ├── a1.pdf
 │   ├── a2.pdf
-│   └── a3.pdf
+│   ├── a3.pdf
+│   ├── a4.pdf
+│   └── a5.pdf
 ├── labs
 │   ├── l1
 │   │   └── l1.pdf
@@ -21,11 +23,20 @@ Labs/Assignments for CS0.101 Computer Programming
 │   │   ├── l3b.pdf
 │   │   ├── l3c.pdf
 │   │   └── l3d.pdf
-│   └── l4
-│       ├── l4a.pdf
-│       ├── l4b.pdf
-│       ├── l4c.pdf
-│       └── l4d.pdf
+│   ├── l4
+│   │   ├── l4a.pdf
+│   │   ├── l4b.pdf
+│   │   ├── l4c.pdf
+│   │   └── l4d.pdf
+│   ├── l5
+│   │   ├── l5a.pdf
+│   │   ├── l5b.pdf
+│   │   ├── l5c.pdf
+│   │   └── l5d.pdf
+│   └── l6
+│       ├── l6a.pdf
+│       ├── l6b.pdf
+│       └── l6d.pdf
 ├── other
 │   └── prac1.pdf
 └── README.md
